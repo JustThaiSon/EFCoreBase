@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="200" xml:space="preserve">
+    <value>Thành Công!</value>
+  </data>
+  <data name="-400" xml:space="preserve">
+    <value>SmartContract Revert.</value>
+  </data>
+  <data name="-106" xml:space="preserve">
+    <value>Không đủ tiền!</value>
+  </data>
+  <data name="-107" xml:space="preserve">
+    <value>Không tồn tại message!</value>
+  </data>
+  <data name="-108" xml:space="preserve">
+    <value>Người dùng không tồn tại!</value>
+  </data>
+  <data name="-109" xml:space="preserve">
+    <value>Số lượng không đủ!</value>
+  </data>
+  <data name="-110" xml:space="preserve">
+    <value>Người nhận không tồn tại!</value>
+  </data>
+  <data name="-111" xml:space="preserve">
+    <value>Cuộc hội thoại không tồn tại!</value>
+  </data>
+  <data name="-112" xml:space="preserve">
+    <value>Không tồn tại sản phẩm!</value>
+  </data>
+  <data name="-114" xml:space="preserve">
+    <value>Token không đủ!</value>
+  </data>
+  <data name="-116" xml:space="preserve">
+    <value>Kho không tồn tại!</value>
+  </data>
+  <data name="-117" xml:space="preserve">
+    <value>Thành tích không tồn tại!</value>
+  </data>
+  <data name="-118" xml:space="preserve">
+    <value>Năng lượng đã đầy!</value>
+  </data>
+  <data name="-119" xml:space="preserve">
+    <value>Dữ liệu trả về rỗng!</value>
+  </data>
+  <data name="-140" xml:space="preserve">
+    <value>Giới tính không hợp lệ!</value>
+  </data>
+  <data name="-141" xml:space="preserve">
+    <value>Loại tiền không hợp lệ!</value>
+  </data>
+  <data name="-142" xml:space="preserve">
+    <value>Người Chơi không có sản phẩm này!</value>
+  </data>
+  <data name="-143" xml:space="preserve">
+    <value>Sản phẩm này không phải là Package!</value>
+  </data>
+  <data name="-144" xml:space="preserve">
+    <value>Item này không đủ điều kiện để giao dịch !</value>
+  </data>
+  <data name="-145" xml:space="preserve">
+    <value>Tỉ lệ không được quá 100 %!</value>
+  </data>
+  <data name="-146" xml:space="preserve">
+    <value>Email đã tồn tại!</value>
+  </data>
+  <data name="-115" xml:space="preserve">
+    <value>Không tồn tại Type!</value>
+  </data>
+  <data name="-113" xml:space="preserve">
+    <value>Tên hiển thị đã tồn tại!</value>
+  </data>
+  <data name="-91" xml:space="preserve">
+    <value>Sai status hoặc số thứ tự!</value>
+  </data>
+  <data name="-92" xml:space="preserve">
+    <value>Không đủ năng lượng!</value>
+  </data>
+  <data name="-93" xml:space="preserve">
+    <value>Tên hiển thị đã tồn tại!</value>
+  </data>
+  <data name="-94" xml:space="preserve">
+    <value>Mail không tồn tại!</value>
+  </data>
+  <data name="-96" xml:space="preserve">
+    <value>Người dùng đã tồn tại!</value>
+  </data>
+  <data name="-95" xml:space="preserve">
+    <value>Tuổi không hợp lệ!</value>
+  </data>
+  <data name="-98" xml:space="preserve">
+    <value>Đăng kí không thành công!</value>
+  </data>
+  <data name="-500" xml:space="preserve">
+    <value>Lỗi hệ thống!</value>
+  </data>
+  <data name="-401" xml:space="preserve">
+    <value>Hết hạn token!</value>
+  </data>
+  <data name="-408" xml:space="preserve">
+    <value>Lỗi hết thời gian!</value>
+  </data>
+  <data name="-102" xml:space="preserve">
+    <value>Kiểu dữ liệu không khớp!</value>
+  </data>
+  <data name="-103" xml:space="preserve">
+    <value>Không tồn tại Item!</value>
+  </data>
+  <data name="-104" xml:space="preserve">
+    <value>Phí không hợp lệ!</value>
+  </data>
+  <data name="-105" xml:space="preserve">
+    <value>Số lượng không hợp lệ!</value>
+  </data>
+  <data name="-101" xml:space="preserve">
+    <value>Sai tên đăng nhập!</value>
+  </data>
+  <data name="-97" xml:space="preserve">
+    <value>Sai OTP!</value>
+  </data>
+  <data name="-99" xml:space="preserve">
+    <value>Đăng nhập thất bại!</value>
+  </data>
+  <data name="-403" xml:space="preserve">
+    <value>API không tìm thấy.</value>
+  </data>
+  <data name="-601" xml:space="preserve">
+    <value>{0} được yêu cầu.</value>
+  </data>
+  <data name="-602" xml:space="preserve">
+    <value>Không được nhập quá {0} ký tự.</value>
+  </data>
+  <data name="-603" xml:space="preserve">
+    <value>Nhập ít nhất {0} ký tự.</value>
+  </data>
+  <data name="-604" xml:space="preserve">
+    <value>Nhập trong khoảng từ {0} đến {1} ký tự.</value>
+  </data>
+  <data name="-605" xml:space="preserve">
+    <value>Giá trị không được âm.</value>
+  </data>
+  <data name="-402" xml:space="preserve">
+    <value>Truy cập bất hợp pháp. Vui lòng đợi 5 phút và thử lại.</value>
+  </data>
+  <data name="-606" xml:space="preserve">
+    <value>Giá trị phải lớn hơn 0</value>
+  </data>
+  <data name="-607" xml:space="preserve">
+    <value>Giá trị phải là số nguyên</value>
+  </data>
+  <data name="-120" xml:space="preserve">
+    <value>Không thể tự đấu giá</value>
+  </data>
+  <data name="-121" xml:space="preserve">
+    <value>Đấu giá không tồn tại!</value>
+  </data>
+  <data name="-122" xml:space="preserve">
+    <value>Giá đấu không hợp lệ!</value>
+  </data>
+  <data name="-123" xml:space="preserve">
+    <value>Không thể hủy đấu giá!</value>
+  </data>
+  <data name="-124" xml:space="preserve">
+    <value>Không có vật phẩm phù hợp!</value>
+  </data>
+  <data name="-126" xml:space="preserve">
+    <value>User Chưa có WalletWeb3</value>
+  </data>
+  <data name="-608" xml:space="preserve">
+    <value>Sai định dạng thời gian hh:mm</value>
+  </data>
+  <data name="-125" xml:space="preserve">
+    <value>Đã xảy ra lỗi</value>
+  </data>
+  <data name="-127" xml:space="preserve">
+    <value>Bạn đã tham gia máy chủ Discord này</value>
+  </data>
+  <data name="-128" xml:space="preserve">
+    <value>Nhiệm vụ đã được hoàn thành</value>
+  </data>
+  <data name="-405" xml:space="preserve">
+    <value>Địa chỉ ví đã tồn tại.</value>
+  </data>
+  <data name="-129" xml:space="preserve">
+    <value>Số điện thoại chưa được liên kết với Telegram</value>
+  </data>
+  <data name="-131" xml:space="preserve">
+    <value>Không thế gửi tin nhắn cho bản thân mình!</value>
+  </data>
+  <data name="-132" xml:space="preserve">
+    <value>Bạn không thể mua sản phẩm này nữa!</value>
+  </data>
+  <data name="-409" xml:space="preserve">
+    <value>Không có ticket!</value>
+  </data>
+  <data name="-410" xml:space="preserve">
+    <value>Bạn không có thẻ đổi tên</value>
+  </data>
+  <data name="-411" xml:space="preserve">
+    <value>Tên đã tồn tại</value>
+  </data>
+  <data name="-412" xml:space="preserve">
+    <value>Số Token còn lại không đủ !</value>
+  </data>
+  <data name="-130" xml:space="preserve">
+    <value>Option không hợp lệ!</value>
+  </data>
+  <data name="-406" xml:space="preserve">
+    <value>Tài khoản của bạn đã được đăng nhập ở một nơi khác.</value>
+  </data>
+  <data name="-147" xml:space="preserve">
+    <value>Đã là bạn bè</value>
+  </data>
+  <data name="-148" xml:space="preserve">
+    <value>Đã có yêu cầu kết bạn với người chơi này</value>
+  </data>
+  <data name="-149" xml:space="preserve">
+    <value>Bạn đã yêu cầu quá nhiều lần, vui lòng thử lại sau</value>
+  </data>
+  <data name="-150" xml:space="preserve">
+    <value>Yêu cầu không hợp lệ</value>
+  </data>
+  <data name="-151" xml:space="preserve">
+    <value>Giới hạn tin nhắn, hãy kết bạn để nhắn tin thêm.</value>
+  </data>
+  <data name="-152" xml:space="preserve">
+    <value>Giao dịch không xác thực hoặc bị giả mạo!</value>
+  </data>
+  <data name="-153" xml:space="preserve">
+    <value>Giá trị dataType không hợp lệ. Vui lòng chọn 1 (Ngày), 2 (Tuần), 3 (Tháng) hoặc 4 (Năm). </value>
+  </data>
+  <data name="-154" xml:space="preserve">
+    <value>Sản phẩm này đã tồn tại trong 1 danh mục !</value>
+  </data>
+  <data name="-155" xml:space="preserve">
+    <value>Bạn vừa yêu cầu mã OTP. Vui lòng chờ 1 phút trước khi thử lại.</value>
+  </data>
+  <data name="-156" xml:space="preserve">
+    <value>Bạn đã yêu cầu quá số lần OTP trong 24 giờ. Vui lòng thử lại vào ngày mai.</value>
+  </data>
+  <data name="-157" xml:space="preserve">
+    <value>Bạn đã nhập sai quá nhiều lần. Vui lòng thử lại sau.</value>
+  </data>
+  <data name="-158" xml:space="preserve">
+    <value>Product này đã có combo !</value>
+  </data>
+  <data name="-159" xml:space="preserve">
+    <value>Topic không tồn tại!</value>
+  </data>
+  <data name="-160" xml:space="preserve">
+    <value>Người chơi đã bị khóa !</value>
+  </data>
+  <data name="-161" xml:space="preserve">
+    <value>Không đủ Follower</value>
+  </data>
+  <data name="-162" xml:space="preserve">
+    <value>Bạn đang không ở trong Livestream</value>
+  </data>
+</root>

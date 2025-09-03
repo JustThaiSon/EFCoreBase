@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="200" xml:space="preserve">
+    <value>Success!</value>
+  </data>
+  <data name="-400" xml:space="preserve">
+    <value>SmartContract Revert.</value>
+  </data>
+  <data name="-106" xml:space="preserve">
+    <value>Insufficient balance!</value>
+  </data>
+  <data name="-107" xml:space="preserve">
+    <value>Message not exist!</value>
+  </data>
+  <data name="-108" xml:space="preserve">
+    <value>User not exist!</value>
+  </data>
+  <data name="-109" xml:space="preserve">
+    <value>Quantity is not enough!</value>
+  </data>
+  <data name="-110" xml:space="preserve">
+    <value>The recipient does not exist!</value>
+  </data>
+  <data name="-111" xml:space="preserve">
+    <value>Not exist Chat!</value>
+  </data>
+  <data name="-112" xml:space="preserve">
+    <value>Not exist Product!</value>
+  </data>
+  <data name="-114" xml:space="preserve">
+    <value>Insufficient Token!</value>
+  </data>
+  <data name="-116" xml:space="preserve">
+    <value>Warehouse not exist!</value>
+  </data>
+  <data name="-117" xml:space="preserve">
+    <value>Achievement not exist!</value>
+  </data>
+  <data name="-118" xml:space="preserve">
+    <value>Full of energy!</value>
+  </data>
+  <data name="-119" xml:space="preserve">
+    <value>The data returned is empty!</value>
+  </data>
+  <data name="-140" xml:space="preserve">
+    <value>Invalid gender!</value>
+  </data>
+  <data name="-141" xml:space="preserve">
+    <value>TypeMoney!</value>
+  </data>
+  <data name="-142" xml:space="preserve">
+    <value>User does not have this product!</value>
+  </data>
+  <data name="-143" xml:space="preserve">
+    <value>This product is not a Package!</value>
+  </data>
+  <data name="-144" xml:space="preserve">
+    <value>This item is not eligible for trading!</value>
+  </data>
+  <data name="-145" xml:space="preserve">
+    <value>Rate cannot exceed 100%!</value>
+  </data>
+  <data name="-146" xml:space="preserve">
+    <value>Email Exist!</value>
+  </data>
+  <data name="-115" xml:space="preserve">
+    <value>Type not exist!</value>
+  </data>
+  <data name="-113" xml:space="preserve">
+    <value>Display name exist!</value>
+  </data>
+  <data name="-91" xml:space="preserve">
+    <value>Incorrect status or serial number!</value>
+  </data>
+  <data name="-92" xml:space="preserve">
+    <value>Insufficient Energy </value>
+  </data>
+  <data name="-93" xml:space="preserve">
+    <value>Display name already exists!</value>
+  </data>
+  <data name="-94" xml:space="preserve">
+    <value>Email not exist!</value>
+  </data>
+  <data name="-96" xml:space="preserve">
+    <value>Exist User!</value>
+  </data>
+  <data name="-95" xml:space="preserve">
+    <value>Age not valid!</value>
+  </data>
+  <data name="-98" xml:space="preserve">
+    <value>Register false!!</value>
+  </data>
+  <data name="-500" xml:space="preserve">
+    <value>Wrong system!</value>
+  </data>
+  <data name="-401" xml:space="preserve">
+    <value>Invalid Token!</value>
+  </data>
+  <data name="-408" xml:space="preserve">
+    <value>Time out error!</value>
+  </data>
+  <data name="-102" xml:space="preserve">
+    <value>Wrong Type and login name!</value>
+  </data>
+  <data name="-103" xml:space="preserve">
+    <value>Not Exist Item!</value>
+  </data>
+  <data name="-104" xml:space="preserve">
+    <value>Invalid fee!</value>
+  </data>
+  <data name="-105" xml:space="preserve">
+    <value>Quantity not valid!</value>
+  </data>
+  <data name="-101" xml:space="preserve">
+    <value>Wrong login name!</value>
+  </data>
+  <data name="-97" xml:space="preserve">
+    <value>Wrong OTP!</value>
+  </data>
+  <data name="-99" xml:space="preserve">
+    <value>Login false!</value>
+  </data>
+  <data name="-403" xml:space="preserve">
+    <value>API not found.</value>
+  </data>
+  <data name="-601" xml:space="preserve">
+    <value>{0} is required.</value>
+  </data>
+  <data name="-602" xml:space="preserve">
+    <value>Do not enter more than {0} characters.</value>
+  </data>
+  <data name="-603" xml:space="preserve">
+    <value>Enter at least {0} characters.</value>
+  </data>
+  <data name="-604" xml:space="preserve">
+    <value>Enter from {0} to {1} characters.</value>
+  </data>
+  <data name="-605" xml:space="preserve">
+    <value>The value is not negative.</value>
+  </data>
+  <data name="-402" xml:space="preserve">
+    <value>Access illegal. Please wait 5 minutes and try again.</value>
+  </data>
+  <data name="-606" xml:space="preserve">
+    <value>The value must greater than 0</value>
+  </data>
+  <data name="-607" xml:space="preserve">
+    <value>The value must be Interger</value>
+  </data>
+  <data name="-120" xml:space="preserve">
+    <value>Cannot bid on own</value>
+  </data>
+  <data name="-121" xml:space="preserve">
+    <value>Auction not exist!</value>
+  </data>
+  <data name="-122" xml:space="preserve">
+    <value>Invalid bid!</value>
+  </data>
+  <data name="-123" xml:space="preserve">
+    <value>Cannot cancel Auction!</value>
+  </data>
+  <data name="-124" xml:space="preserve">
+    <value>No matching items!</value>
+  </data>
+  <data name="-126" xml:space="preserve">
+    <value>User does not have WalletWeb3 yet</value>
+  </data>
+  <data name="-608" xml:space="preserve">
+    <value>Invalid format time hh:mm</value>
+  </data>
+  <data name="-125" xml:space="preserve">
+    <value>An error has occurred</value>
+  </data>
+  <data name="-127" xml:space="preserve">
+    <value>You have joined this Discord server</value>
+  </data>
+  <data name="-128" xml:space="preserve">
+    <value>The quest has been completed.</value>
+  </data>
+  <data name="-405" xml:space="preserve">
+    <value>WalletAddress Exist.</value>
+  </data>
+  <data name="-129" xml:space="preserve">
+    <value>Phone number not linked to Telegram</value>
+  </data>
+  <data name="-131" xml:space="preserve">
+    <value>Can't send messages to myself!</value>
+  </data>
+  <data name="-132" xml:space="preserve">
+    <value>You can no longer purchase this product!</value>
+  </data>
+  <data name="-409" xml:space="preserve">
+    <value>Invalid Ticket</value>
+  </data>
+  <data name="-410" xml:space="preserve">
+    <value>You don't have rename card</value>
+  </data>
+  <data name="-411" xml:space="preserve">
+    <value>Name already exists!</value>
+  </data>
+  <data name="-412" xml:space="preserve">
+    <value>Not enough Tokens left!</value>
+  </data>
+  <data name="-130" xml:space="preserve">
+    <value>Option invalid!</value>
+  </data>
+  <data name="-406" xml:space="preserve">
+    <value>Your account is already logged in from another location.</value>
+  </data>
+  <data name="-147" xml:space="preserve">
+    <value>You are friends with this player</value>
+  </data>
+  <data name="-148" xml:space="preserve">
+    <value>You have a friend request for this player</value>
+  </data>
+  <data name="-149" xml:space="preserve">
+    <value>You have requested too many times, please try again later.</value>
+  </data>
+  <data name="-150" xml:space="preserve">
+    <value>Invalid Request</value>
+  </data>
+  <data name="-151" xml:space="preserve">
+    <value>Message limit, add friends to message more.</value>
+  </data>
+  <data name="-152" xml:space="preserve">
+    <value>Transaction is not authentic or is fake!</value>
+  </data>
+  <data name="-153" xml:space="preserve">
+    <value>Invalid dataType value. Please select 1 (Day),2 (Week) ,3 (Month), or 4 (Year).</value>
+  </data>
+  <data name="-154" xml:space="preserve">
+    <value>This product already exists in 1 category!</value>
+  </data>
+  <data name="-155" xml:space="preserve">
+    <value>You've recently requested an OTP. Please wait at least 1 minute before trying again.</value>
+  </data>
+  <data name="-156" xml:space="preserve">
+    <value>You have exceeded the number of allowed OTP requests in the last 24 hours. Please try again tomorrow.</value>
+  </data>
+  <data name="-157" xml:space="preserve">
+    <value>You have entered the wrong OTP too many times. Please try again later.</value>
+  </data>
+  <data name="-158" xml:space="preserve">
+    <value>This product has combo !</value>
+  </data>
+  <data name="-160" xml:space="preserve">
+    <value>Not enough Follower</value>
+  </data>
+  <data name="-161" xml:space="preserve">
+    <value>You are not in Livestream</value>
+  </data>
+  <data name="-159" xml:space="preserve">
+    <value>Topic not exist!</value>
+  </data>
+  <data name="-160" xml:space="preserve">
+    <value>Player is locked!</value>
+  </data>
+</root>
