@@ -18,7 +18,7 @@ public class ApplicationDbContext : DbContext
     {
         base.OnConfiguring(optionsBuilder);
         optionsBuilder.LogTo(Console.WriteLine);
-        optionsBuilder.UseSqlServer("Server=DESKTOP-ADMIN;Database=StreamieDB;Trusted_Connection=True;TrustServerCertificate=True;");
+        optionsBuilder.UseNpgsql("Host=ballast.proxy.rlwy.net;Port=48465;Database=railway;Username=postgres;Password=WtbBZJwVKRHsfBEbVjjEaYugAEBqYbHN;SSL Mode=Require;Trust Server Certificate=true");
     }
 
     public DbSet<NguyenEntity> NguyenEntities { get; set; }
