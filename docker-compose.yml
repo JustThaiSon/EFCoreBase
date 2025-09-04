@@ -1,0 +1,6 @@
+services:
+  resfulapi:
+    image: ${DOCKER_REGISTRY-}resfulapi
+    build:
+      context: .
+      dockerfile: ResfulAPI\Dockerfile
