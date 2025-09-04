@@ -9,6 +9,7 @@ using FluentValidation.AspNetCore;
 using FluentValidation;
 using System.Security.Claims;
 using MyProject.Helper.ModelHelps;
+using MyProject.Application.Common.Mapping;
 
 namespace ResfulAPI.Extensions
 {
@@ -59,7 +60,7 @@ namespace ResfulAPI.Extensions
             var jwtSettings = configuration.GetSection("Jwt").Get<JwtSettings>();
 
             services.AddControllersWithViews();
-            //services.AddAutoMapper(typeof(MapperProfile));
+            services.AddAutoMapper(typeof(MappingProfile));
             services.AddHttpClient();
             //services.AddAuth(jwtSettings);
             services.AddDistributedMemoryCache();

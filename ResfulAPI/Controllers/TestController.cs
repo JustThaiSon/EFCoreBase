@@ -3,7 +3,6 @@ using Microsoft.AspNetCore.Mvc;
 using MyProject.Application.Services;
 using MyProject.Application.Services.Interfaces;
 using MyProject.Domain.Entities;
-
 namespace ResfulAPI.Controllers
 {
     [Route("api/[controller]")]
@@ -19,11 +18,12 @@ namespace ResfulAPI.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> GetAsync()
+        public async Task<IActionResult> GetAsync(int pageNumber, int pageSize)
         {
-            var data = await _nguyenService.GetAllAsync();
+            var data = await _nguyenService.GetAllAsync(pageNumber, pageSize);
             return Ok(data);
         }
+
 
         [HttpPost]
         public async Task<IActionResult> PostAsync(NguyenEntity tesst)

@@ -6,16 +6,13 @@ namespace MyProject.Infrastructure.Persistence.HandleContext;
 
 public class ApplicationDbContext : DbContext
 {
+    public ApplicationDbContext()
+    {
+    }
     public ApplicationDbContext([NotNull] DbContextOptions<ApplicationDbContext> options) : base(options)
     {
         ChangeTracker.LazyLoadingEnabled = false;
     }
-
-    public ApplicationDbContext()
-    {
-
-    }
-
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {

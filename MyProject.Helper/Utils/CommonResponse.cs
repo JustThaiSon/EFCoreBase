@@ -1,12 +1,42 @@
-﻿using Newtonsoft.Json;
+﻿using MyProject.Helper.Constants.Globals;
+using Newtonsoft.Json;
 namespace MyProject.Helper.Utils
 {
     public class CommonResponse<T>
     {
         public int ResponseCode { get; set; }
-        public string Message { get; set; }
-        public T Data { get; set; }
+        public string Message { get; set; } = string.Empty;
+        public T? Data { get; set; }
+
+        public static CommonResponse<T> Success(
+            T data,
+            ResponseCodeEnum code = ResponseCodeEnum.SUCCESS,
+            string? customMessage = null,
+            string langCode = "vi")
+        {
+            return new CommonResponse<T>
+            {
+                ResponseCode = (int)code,
+                Message = customMessage ?? ResourceUtil.GetMessage((int)code, langCode),
+                Data = data
+            };
+        }
+
+        public static CommonResponse<T> Fail(
+            ResponseCodeEnum code,
+            string? customMessage = null,
+            string langCode = "vi")
+        {
+            return new CommonResponse<T>
+            {
+                ResponseCode = (int)code,
+                Message = customMessage ?? ResourceUtil.GetMessage((int)code, langCode),
+                Data = default
+            };
+        }
     }
+
+
 
     public class CommonMessage<T>
     {
