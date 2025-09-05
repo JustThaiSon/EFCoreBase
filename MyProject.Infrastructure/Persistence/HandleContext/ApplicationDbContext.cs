@@ -1,13 +1,20 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using MyProject.Domain.Entities;
 
 namespace MyProject.Infrastructure.Persistence.HandleContext;
 
 public class ApplicationDbContext : DbContext
 {
+    private static string connectionString = string.Empty;
     public ApplicationDbContext()
     {
+        var configuration = new ConfigurationBuilder()
+              .AddJsonFile("appsettings.json")
+              .Build();
+
+        connectionString = configuration.GetConnectionString("Default") ?? string.Empty;
     }
     public ApplicationDbContext([NotNull] DbContextOptions<ApplicationDbContext> options) : base(options)
     {
@@ -18,21 +25,23 @@ public class ApplicationDbContext : DbContext
     {
         base.OnConfiguring(optionsBuilder);
         optionsBuilder.LogTo(Console.WriteLine);
-        optionsBuilder.UseNpgsql("Host=ballast.proxy.rlwy.net;Port=48465;Database=railway;Username=postgres;Password=WtbBZJwVKRHsfBEbVjjEaYugAEBqYbHN;SSL Mode=Require;Trust Server Certificate=true");
+        optionsBuilder.UseSqlServer("Server=DESKTOP-ADMIN\\SQLEXPRESS;Database=StreamieDB2;Trusted_Connection=True;");
     }
 
     public DbSet<NguyenEntity> NguyenEntities { get; set; }
     public DbSet<Testtiep> Testtieps { get; set; }
+    public DbSet<AuditLog> AuditLogs { get; set; }
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplySoftDeleteGlobalFilter();
         modelBuilder.ApplyAuditPrecision();
 
-        modelBuilder.Entity<NguyenEntity>().ToTable("NGUYEN");
-        modelBuilder.Entity<NguyenEntity>(entity => { entity.HasKey(c => c.Id); });
+        //modelBuilder.Entity<NguyenEntity>().ToTable("NGUYEN");
+        //modelBuilder.Entity<NguyenEntity>(entity => { entity.HasKey(c => c.Id); });
 
-        modelBuilder.Entity<Testtiep>().ToTable("EntityTest");
-        modelBuilder.Entity<Testtiep>(entity => { entity.HasKey(c => c.Id); });
+        //modelBuilder.Entity<Testtiep>().ToTable("EntityTest");
+        //modelBuilder.Entity<Testtiep>(entity => { entity.HasKey(c => c.Id); });
     }
 }

@@ -7,6 +7,7 @@ namespace MyProject.Application.Services.Interfaces
     public interface INguyenService
     {
         Task<CommonResponse<GetNguyenEntityPagingRes>> GetAllAsync(int pageNumber, int pageSize, CancellationToken cancellationToken = default);
-        Task<NguyenEntity> CreateAsync(NguyenEntity entity);
+        Task<CommonResponse<string>> CreateAsync(NguyenEntity entity);
+        Task<bool> DeleteAsync(Guid id);
     }
 }

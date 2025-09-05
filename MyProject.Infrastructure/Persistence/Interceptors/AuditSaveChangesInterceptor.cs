@@ -1,6 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using MyProject.Domain.Entities;
 using MyProject.Domain.Entities.Interfaces.Audited;
+using Newtonsoft.Json;
 
 namespace MyProject.Infrastructure;
 
@@ -17,6 +19,7 @@ public class AuditSaveChangesInterceptor : SaveChangesInterceptor
     {
         if (eventData.Context is null) return base.SavingChanges(eventData, result);
         ApplyAudit(eventData.Context);
+        AddAuditLogs(eventData.Context);
         return base.SavingChanges(eventData, result);
     }
 
@@ -25,6 +28,7 @@ public class AuditSaveChangesInterceptor : SaveChangesInterceptor
         if (eventData.Context is not null)
         {
             ApplyAudit(eventData.Context);
+            AddAuditLogs(eventData.Context);
         }
         return base.SavingChangesAsync(eventData, result, cancellationToken);
     }
@@ -56,6 +60,56 @@ public class AuditSaveChangesInterceptor : SaveChangesInterceptor
                 deleted.DeletedTime = now;
                 deleted.DeletedBy = userId;
             }
+        }
+    }
+    private void AddAuditLogs(DbContext context)
+    {
+        var userId = _getUserId();
+        var auditEntries = new List<AuditLog>();
+
+        foreach (var entry in context.ChangeTracker.Entries())
+        {
+            if (entry.Entity is AuditLog || entry.State == EntityState.Detached || entry.State == EntityState.Unchanged)
+                continue;
+
+            var audit = new AuditLog
+            {
+                TableName = entry.Metadata.GetTableName() ?? entry.Entity.GetType().Name,
+                ActionType = entry.State.ToString(),
+                UserId = userId,
+                TimeStamp = DateTimeOffset.UtcNow,
+                KeyValues = JsonConvert.SerializeObject(entry.Properties
+                    .Where(p => p.Metadata.IsPrimaryKey())
+                    .ToDictionary(p => p.Metadata.Name, p => p.CurrentValue))
+            };
+
+            if (entry.State == EntityState.Modified)
+            {
+                audit.OldValues = JsonConvert.SerializeObject(entry.Properties
+                    .Where(p => p.IsModified)
+                    .ToDictionary(p => p.Metadata.Name, p => p.OriginalValue));
+
+                audit.NewValues = JsonConvert.SerializeObject(entry.Properties
+                    .Where(p => p.IsModified)
+                    .ToDictionary(p => p.Metadata.Name, p => p.CurrentValue));
+            }
+            else if (entry.State == EntityState.Added)
+            {
+                audit.NewValues = JsonConvert.SerializeObject(entry.Properties
+                    .ToDictionary(p => p.Metadata.Name, p => p.CurrentValue));
+            }
+            else if (entry.State == EntityState.Deleted)
+            {
+                audit.OldValues = JsonConvert.SerializeObject(entry.Properties
+                    .ToDictionary(p => p.Metadata.Name, p => p.OriginalValue));
+            }
+
+            auditEntries.Add(audit);
+        }
+
+        if (auditEntries.Any())
+        {
+            context.Set<AuditLog>().AddRange(auditEntries);
         }
     }
 }

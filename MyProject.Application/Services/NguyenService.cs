@@ -37,12 +37,20 @@ namespace MyProject.Application.Services
             });
         }
 
-        public async Task<NguyenEntity> CreateAsync(NguyenEntity entity)
+        public async Task<CommonResponse<string>> CreateAsync(NguyenEntity entity)
         {
             await _nguyenRepository.AddAsync(entity);
             await _nguyenRepository.SaveChangesAsync();
-            return entity;
+            return CommonResponse<string>.Success(null);
         }
-      
+
+        public async Task<bool> DeleteAsync(Guid id)
+        {
+            var entity = await _nguyenRepository.AsNoTrackingQueryable().FirstOrDefaultAsync(x => x.Id == id);
+            if (entity == null) return false;
+            await _nguyenRepository.RemoveAsync(entity);
+            await _nguyenRepository.SaveChangesAsync();
+            return true;
+        }
     }
 }

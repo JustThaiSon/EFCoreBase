@@ -43,9 +43,9 @@ namespace ResfulAPI.Extensions
             // DbContext chính
             services.AddDbContext<ApplicationDbContext>((sp, options) =>
             {
-                options.UseNpgsql(connectionString);
+                options.UseSqlServer(connectionString);
                 // Nếu cần bật audit thì bỏ comment
-                // options.AddInterceptors(sp.GetRequiredService<AuditSaveChangesInterceptor>());
+                 options.AddInterceptors(sp.GetRequiredService<AuditSaveChangesInterceptor>());
             });
 
             return services;
